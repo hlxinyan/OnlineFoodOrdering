@@ -1,4 +1,4 @@
-var config = require('./config.dev.js');
+var config = require('./config.development.js');
 
 
 
