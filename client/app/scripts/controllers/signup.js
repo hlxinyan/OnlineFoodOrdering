@@ -49,12 +49,12 @@ angular.module('clientApp') // make sure this is set to whatever it is in your c
       // we'll come back to here and fill in more when ready
       request.success(function (data) {
         // to be filled in on success
-        console.log(data.msg);
+        console.log(data);
       });
 
       request.error(function (data) {
         // to be filled in on error
-        console.log(data.msg);
+        console.log(data);
       });
 
     };
