@@ -1,12 +1,19 @@
-# client
+# My First Angular JS Skeleton
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
+This project is my first angular js skeleton after learning angular js for a week.
 version 0.11.1.
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+npm start
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+npm test
+
+## E2E Testing
+
+npm run protractor
+
+#package
+grunt
