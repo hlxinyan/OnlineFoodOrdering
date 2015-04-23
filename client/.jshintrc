@@ -17,7 +17,15 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
+  "globalstrict": true,
   "globals": {
-    "angular": false
+    "angular": false,
+    "browser": false,
+    "element": false,
+    "by": false,
+    "describe": false,
+    "beforeEach": false,
+    "it": false,
+    "expect": false
   }
 }

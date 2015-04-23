@@ -1,0 +1,21 @@
+.body{
+  background-color: #edeff0;
+  position: relative;
+  z-index: 0;
+  overflow-y: auto;
+}
+
+#header {
+  background: #026aa7;
+  height: 30px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  z-index: 10;
+}
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+li{list-style:none}

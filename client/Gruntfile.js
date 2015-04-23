@@ -25,6 +25,9 @@ module.exports = function(grunt) {
     },
 
     jshint: {
+      options: {
+        node: true
+      },
       all: [ 'Gruntfile.js', 'app/*.js', 'app/js/*.js' ]
     },
     uglify: {

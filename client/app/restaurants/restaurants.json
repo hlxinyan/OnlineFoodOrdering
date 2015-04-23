@@ -1,0 +1,41 @@
+[
+  {
+    "id": "r0001",
+    "name": "凡客餐饮",
+    "phones": [
+      "021-68564486",
+      "021-58331825"
+    ],
+    "snippet": "团体订餐满10份送1.25L美汁源果粒橙一瓶，满20份送2瓶，以此类推。",
+    "address": "上海市浦东新区羽山路689号",
+    "imageUrl": "img/restaurants/r0001/logo.gif",
+    "web_site": "http://fanke.sh.cn",
+    "business_hour": "11:00-12:30",
+    "invoice": false,
+    "order_count": 0
+  },
+  {
+    "id": "r0002",
+    "name": "煲仔饭商务套餐",
+    "phones": ["021-58810277"],
+    "snippet": "煲仔饭商务套餐,可以开发票",
+    "address": "上海市浦东新区羽山路689号",
+    "imageUrl": "img/restaurants/r0002/logo.gif",
+    "web_site": "",
+    "business_hour": "7:30-21:30",
+    "invoice": true,
+    "order_count": 0
+  },
+  {
+    "id": "r0003",
+    "name": "小长安",
+    "phones": ["021-58810277"],
+    "snippet": "西北风味",
+    "address": "上海市浦东新区羽山路689号",
+    "imageUrl": "img/restaurants/r0003/logo.gif",
+    "business_hour": "7:30-21:30",
+    "web_site": "",
+    "invoice": false,
+    "order_count": 0
+  }
+]
