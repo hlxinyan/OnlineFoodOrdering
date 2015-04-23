@@ -1,9 +1,15 @@
 <!--Body content-->
 
-<ul class="clearfix">
-  <li ng-repeat="restaurant in restaurants " class="col-md-6">
-    <a href="#/restaurants/{{restaurant.id}}" class=""><img ng-src="{{restaurant.imageUrl}}"></a>
-    <a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a>
-    <p>{{restaurant.snippet}}</p>
+<ul class="media-list">
+  <li ng-repeat="restaurant in restaurants" class="media">
+    <div class="media-left">
+      <a href="#/restaurants/{{restaurant.id}}">
+        <img class="media-object" ng-src="{{restaurant.imageUrl}}">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{restaurant.name}}</h4>
+      {{restaurant.snippet}}
+    </div>
   </li>
 </ul>
