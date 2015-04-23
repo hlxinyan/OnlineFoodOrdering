@@ -1,11 +1,14 @@
-
 <div class="media" ng-repeat="restaurant in restaurants ">
-    <div class="media-left">
-        <a href="#/restaurants/{{restaurant.id}}" class=""><img ng-src="{{restaurant.imageUrl}}"></a>
-    </div>
-    <div class="media-body">
-        <h4 class="media-heading"> <a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></h4>
-        <p>{{restaurant.snippet}}</p>
-    </div>
+  <div class="media-left">
+    <a href="#/restaurants/{{restaurant.id}}" class=""><img ng-src="{{restaurant.imageUrl}}"></a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></h4>
+
+    <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span
+      ng-repeat="phone in restaurant.phones">  {{phone}}</span></p>
+
+    <p class="text-success"> <span class=""></span></p>
+  </div>
 </div>
 
