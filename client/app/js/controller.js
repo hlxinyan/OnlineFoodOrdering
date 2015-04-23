@@ -1,7 +1,7 @@
 (function () {
 
   'use strict';
-  var onLineFoodOrderingControllers = angular.module('onLineFoodOrderingControllers', []);
+  var onLineFoodOrderingControllers = angular.module('onLineFoodOrderingControllers', ['ui.bootstrap']);
 
   onLineFoodOrderingControllers.controller('RestaurantsListCtrl', ['$scope', 'Restaurant',
     function ($scope, Restaurant) {
