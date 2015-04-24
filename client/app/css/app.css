@@ -6,10 +6,14 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav >li> a:focus{color: #c3e9ff}
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
-    background:#00619a;color:#c3e9ff
-}
+    background:#00619a;color:#c3e9ff}
 .media{padding:15px 5px;margin: 0}
 .media{border-bottom: 1px solid #ddd}
 .media:hover{background: rgba(255,255,255,0.5);}
 .media>.media-left{padding-right: 20px}
 .media>.media-left>a>img{width: 150px;height:100px;}
+.navbar-default .navbar-toggle .icon-bar{background-color:#fff}
+.navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus,.navbar-default .navbar-nav .open .dropdown-menu > li > a{ background:#00619a;color:#c3e9ff}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{color: #fff}
+.dropdown-menu{background-color: #00619a;}
+.dropdown-menu>.divider{background-color: #0075ba;}

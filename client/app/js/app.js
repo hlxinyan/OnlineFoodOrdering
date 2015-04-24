@@ -4,6 +4,7 @@
   /* App Module */
   var clientApp = angular.module('clientApp', [
     'ngRoute',
+    'ui.bootstrap',
     'onLineFoodOrderingControllers',
     'onLineFoodOrderingServices'
   ]);
