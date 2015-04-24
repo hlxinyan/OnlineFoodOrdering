@@ -44,7 +44,6 @@
       };
       $('[data-target="#bs-navbar-collapse-1"]').click(function () {
         $('#bs-navbar-collapse-1').toggleClass("in");
-//                alert('ddd')
       })
 
     }]);
