@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var config = require('../config/config.index');
-var UserModel = require('./schemas/User');
+var users = require('./schemas/UserDao');
 
 var uri = 'mongodb://' + config.mongo.uri + '/' + config.mongo.db;
 var options = {
@@ -19,4 +19,4 @@ db.once('open', function callback () {
     console.log('Databsae Connection Successfully Opened at ' + uri);
 });
 
-exports.user= UserModel;
+exports.users= users;

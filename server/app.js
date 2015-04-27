@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 /**
  * Route Imports
  */
-var signup = require('./routes/signup');
+var user = require('./routes/user');
 
 //var routes = require('./routes/index');
 //var users = require('./routes/users');
@@ -69,5 +69,5 @@ app.use(function(err, req, res, next) {
 /**
  * Routes
  */
-app.use('/signup', signup);
+app.use('/user', user);
 module.exports = app;
