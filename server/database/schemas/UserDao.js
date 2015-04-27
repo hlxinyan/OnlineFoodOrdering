@@ -9,8 +9,8 @@ var Schema = mongoose.Schema;
 var UserSchema = new Schema({
     name: {type: String, required: true, index: {unique: true}},
     password: {type: String, required: true},
-    lastAccessTime: {type: Date, default: Date.now},
-    profile: {} // for extra information you may / may not want
+    lastAccessTime: {type: Date, default: Date.now}
+
 });
 
 

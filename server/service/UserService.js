@@ -41,6 +41,9 @@ UserService.prototype.register = function (user, cb) {
             });
 
             userService.encrypt(newUser, function (err, newUser) {
+
+                console.log('Begin encrypt a new user at ' + color.green(time) + ' with the name: ' + color.green(newUser));
+
                 if (err) {
                     return cb(err, newUser);
                 }
@@ -48,31 +51,32 @@ UserService.prototype.register = function (user, cb) {
 
                 // save the user to the database
                 newUser.save(function (err, savedUser) {
-
                     if (err) {
-                        console.log('Problem saving the user ' + color.yellow(savedUser.name) + ' due to ' + err);
-                        return cb(err, savedUser);
+                        console.log('Problem saving the user ' + color.yellow(newUser.name) + ' due to ' + err);
+                        return cb(err, newUser);
                     }
                     // Log success and send the filtered user back
-                    console.log('Successfully created new user: ' + color.green(savedUser.name));
+                    console.log('Successfully created new user: ' + color.green(newUser.name));
 
-                    return cb(null,savedUser);
+                    return cb(null,newUser);
 
                 });
 
             });
 
 
+        }else{
+            // reset attempts and lock info
+            var updates = {
+                $set: {lastAccessTime: Date.now()}
+            };
+            return dbUser.update(updates, function (err) {
+                if (err) return cb(err, dbUser);
+                return  cb(null, dbUser);
+            });
         }
 
-        // reset attempts and lock info
-        var updates = {
-            $set: {lastAccessTime: Date.now()}
-        };
-        return dbUser.update(updates, function (err) {
-            if (err) return cb(err, dbUser);
-            return  cb(null, dbUser);
-        });
+
 
 
     });
@@ -122,8 +126,12 @@ UserService.prototype.encrypt = function (user, cb) {
     // generate salt
 
     console.log("begin encrypt user.name=" + user.name);
+
+    console.log('Begin encrypt a new user at ' +bcrypt);
+
     bcrypt.genSalt(SALT_WORK_FACTOR, function (err, salt) {
-        console.log("begin encrypt2 user.name=" + user.name);
+
+        console.log("begin encrypt2 salt=" + salt);
         if (err) {
             console.log("error");
             return cb(err, user);

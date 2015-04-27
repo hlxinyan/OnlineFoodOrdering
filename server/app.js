@@ -40,7 +40,6 @@ if (app.get('env') === 'development') {
     // This will change in production since we'll be using the dist folder
     // This covers serving up the index page
     app.use(express.static(path.join(__dirname, '../client/app')));
-    app.use(express.static(path.join(__dirname, '../client/.tmp')));
 
    // app.use(favicon(path.join(__dirname, '../client/app/images/yeoman.png')));
 
