@@ -13,7 +13,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right" >
-        <li><a href ng-click="open()">Hello {{user.name}}</a></li>
+        <li><a href>Hello {{user.name}}</a></li>
         <li class="dropdown" dropdown on-toggle="toggled(open)">
           <a href class="dropdown-toggle" dropdown-toggle>
             My order
@@ -33,25 +33,30 @@
 </nav>
 
 
+<div class="input-group uer-box">
+    <input type="text" placeholder="Please enter a username" class="form-control input-lg">
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-primary btn-lg">Sign In</button>
+          </span>
+</div>
+<div class="modal-backdrop fade  in"></div>
+<!--<script type="text/ng-template" id="myModalContent.html">-->
+    <!--<div class="modal-header">-->
+        <!--<h3 class="modal-title">I'm a modal!</h3>-->
+    <!--</div>-->
+    <!--<div class="modal-body">-->
 
-
-<script type="text/ng-template" id="myModalContent.html">
-    <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
-    </div>
-    <div class="modal-body">
-
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-    </div>
-</script>
+    <!--</div>-->
+    <!--<div class="modal-footer">-->
+        <!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
+        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+    <!--</div>-->
+<!--</script>-->
 
 <!--<button class="btn btn-default" ng-click="open()">Open me!</button>-->
 <!--<button class="btn btn-default" ng-click="open('lg')">Large modal</button>-->
 <!--<button class="btn btn-default" ng-click="open('sm')">Small modal</button>-->
-<div ng-show="selected">Selection from a modal: {{ selected }}</div>
+<!--<div ng-show="selected">Selection from a modal: {{ selected }}</div>-->
 
 </div><!-- /.container -->
 
