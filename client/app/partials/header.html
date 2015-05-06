@@ -33,6 +33,7 @@
 </nav>
 
 
+
 <div class="input-group uer-box">
     <input type="text" placeholder="Please enter a username" class="form-control input-lg">
           <span class="input-group-btn">
@@ -52,6 +53,26 @@
         <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
     <!--</div>-->
 <!--</script>-->
+
+
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Login</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-6">
+          <label>UserName:</label> <input type="text" class="form-control" ng-model="name"   ng-required="true"  />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
 
 <!--<button class="btn btn-default" ng-click="open()">Open me!</button>-->
 <!--<button class="btn btn-default" ng-click="open('lg')">Large modal</button>-->

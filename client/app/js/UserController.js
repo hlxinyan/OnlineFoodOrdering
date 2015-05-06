@@ -8,23 +8,21 @@
 
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log',
     function ($scope, $modal, $log) {
-      $scope.user = userObject;
-
-
-      $scope.open = function (size) {
+         $scope.open = function (size) {
 
         var modalInstance = $modal.open({
           templateUrl: 'myModalContent.html',
           controller: 'ModalInstanceCtrl',
           size: size,
           resolve: {
-            items: function () {
-              return $scope.items;
+            name: function () {
+              return $scope.name;
             }
           }
         });
 
-        modalInstance.result.then(function () {
+        modalInstance.result.then(function (name) {
+          $scope.user={name:name};
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
         });
@@ -37,10 +35,24 @@
       });
 
     }]);
-  onLineFoodOrderingControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance) {
+  onLineFoodOrderingControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance,$http) {
+     $scope.ok = function () {
 
+      // Simple POST request example (passing data) :
+      $http.post('/user/register', {name: $scope.name}).
+        success(function(data, status, headers, config) {
+          // this callback will be called asynchronously
+          // when the response is available
+          $scope.data=data;
+          $scope.status=status;
+        }).
+        error(function(data, status, headers, config) {
+          // called asynchronously if an error occurs
+          // or server returns response with an error status.
 
-    $scope.ok = function () {
+          $scope.data=data;
+          $scope.status=status;
+        });
       $modalInstance.close();
     };
 
