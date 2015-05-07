@@ -8,6 +8,7 @@
 
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log',
     function ($scope, $modal, $log) {
+
          $scope.open = function (size) {
 
         var modalInstance = $modal.open({
@@ -21,8 +22,8 @@
           }
         });
 
-        modalInstance.result.then(function (name) {
-          $scope.user={name:name};
+        modalInstance.result.then(function (data) {
+          $scope.user={name:data.name,id:data.id};
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
         });
@@ -43,17 +44,17 @@
         success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available
-          $scope.data=data;
-          $scope.status=status;
+//          $scope.data=data;
+//          $scope.status=status;
+              $modalInstance.close(data);
         }).
         error(function(data, status, headers, config) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
 
-          $scope.data=data;
-          $scope.status=status;
+              $modalInstance.close(data);
         });
-      $modalInstance.close();
+
     };
 
     $scope.cancel = function () {

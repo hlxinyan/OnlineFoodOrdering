@@ -15,9 +15,10 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{color: #fff}
 .dropdown-menu{background-color: #00619a;}
 .dropdown-menu>.divider{background-color: #0075ba;}
-.uer-box{z-index: 9999;width: 90%;position: absolute;left: 5%;top: 40%}
-.uer-box .form-control{background: none;border-color:rgba(255,255,255,0.3)}
+.user-box{z-index: 9999;width: 90%;position: absolute;left: 5%;top: 40%}
+.user-box .form-control{background: none;border-color:rgba(255,255,255,0.3)}
 .modal-backdrop.in{opacity: .85}
+.modal-dialog{margin: 90px auto}
 @media screen and (max-width: 767px) {
     .media{padding:15px 7px;margin: 0}
     .media>.media-left>a>img{width: 72px;height:72px;border-radius: 100%;-wekit-border-radius: 100%;border-radius: 100%; border:3px solid #fff;box-shadow: 3px 3px 3px rgba(0,0,0,0.2); overflow: hidden}
