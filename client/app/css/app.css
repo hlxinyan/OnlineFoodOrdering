@@ -1,19 +1,34 @@
-body{  background-color: #edeff0;}
+body{  background-color: #f3f3f4; font-family: "微软雅黑"}
 nav { background: #026aa7 !important;border-radius: 0 !important;}
+.navbar{margin-bottom:2px}
 .navbar-default .navbar-brand{color:#fff}
 .navbar-default .navbar-brand:hover{color:#fff}
 .navbar-default .navbar-nav > li > a{color: #fff}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav >li> a:focus{color: #c3e9ff}
-
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
     background:#00619a;color:#c3e9ff}
-.media{padding:15px 5px;margin: 0}
-.media{border-bottom: 1px solid #ddd}
-.media:hover{background: rgba(255,255,255,0.5);}
-.media>.media-left{padding-right: 20px}
-.media>.media-left>a>img{width: 150px;height:100px;}
+.media{padding:0 15px;margin: 0;}
+.media .content-box{padding:15px;margin-top:25px;border: 1px solid #e7eaec; background: #fff}
+.media>.content-box>.media-left>a>img{width: 72px;height:72px;border-radius: 100%;-wekit-border-radius: 100%;border-radius: 100%; border:3px solid #fff;box-shadow: 3px 3px 3px rgba(0,0,0,0.2); overflow: hidden}
+.media:hover{}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus,.navbar-default .navbar-nav .open .dropdown-menu > li > a{ background:#00619a;color:#c3e9ff}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{color: #fff}
 .dropdown-menu{background-color: #00619a;}
 .dropdown-menu>.divider{background-color: #0075ba;}
+.user-box{z-index: 9999;width: 90%;position: absolute;left: 5%;top: 40%}
+.user-box .form-control{background: none;border-color:rgba(255,255,255,0.3);color:#fff}
+.modal-backdrop.in{opacity: .85}
+.modal-dialog{margin: 90px auto}
+@media screen and (max-width: 767px) {
+    .media>.content-box>.media-left{padding-right: 20px}
+    .container{padding-right: 0;padding-left:0}
+    .navbar .container{padding-right: 15px;padding-left:15px;}
+
+
+}
+@media (min-width: 768px){
+    .media>.content-box>.media-left>a>img{width: 100px;height:100px;}
+    .media>.content-box>.media-left{padding-right: 20px}
+}
+

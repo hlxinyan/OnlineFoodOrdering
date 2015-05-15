@@ -1,14 +1,19 @@
-<div class="media" ng-repeat="restaurant in restaurants ">
-  <div class="media-left">
-    <a href="#/restaurants/{{restaurant.id}}" class=""><img ng-src="{{restaurant.imageUrl}}"></a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading"><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></h4>
+<div class="media col-md-6" ng-repeat="restaurant in restaurants ">
+  <div class="content-box pulse">
+      <div class="media-left">
+          <a href="#/restaurants/{{restaurant.id}}" class=""><img ng-src="{{restaurant.imageUrl}}"></a>
+      </div>
+      <div class="media-body">
+          <h4 class="media-heading"><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></h4>
 
-    <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span
-      ng-repeat="phone in restaurant.phones">  {{phone}}</span></p>
+          <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span
+                  ng-repeat="phone in restaurant.phones">  {{phone}}</span></p>
 
-    <p class="text-success"> <span class=""></span></p>
-  </div>
+          <p class="text-success"> <span class=""></span></p>
+      </div>
+  </div><!--end content-box-->
 </div>
+
+
+
 

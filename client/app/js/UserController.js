@@ -10,6 +10,7 @@
 
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log',
     function ($scope, $modal, $log) {
+
          $scope.open = function (size) {
            $scope.user=userObject;
         var modalInstance = $modal.open({
@@ -36,6 +37,7 @@
 //                alert('ddd')
       });
 
+
     }]);
   onLineFoodOrderingControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance,$http) {
      $scope.ok = function () {
@@ -45,13 +47,16 @@
         success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available
+
           $modalInstance.close(data);
+
         }).
         error(function(data, status, headers, config) {
           // called asynchronously if an error occurs
           // or server returns response with an error status.
 
-          $modalInstance.close(data);
+              $modalInstance.close(data);
+
         });
 
     };
