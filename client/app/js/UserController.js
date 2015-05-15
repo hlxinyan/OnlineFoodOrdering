@@ -11,14 +11,14 @@
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log',
     function ($scope, $modal, $log) {
          $scope.open = function (size) {
-
+           $scope.user=userObject;
         var modalInstance = $modal.open({
           templateUrl: 'myModalContent.html',
           controller: 'ModalInstanceCtrl',
           size: size,
           resolve: {
             name: function () {
-              return $scope.name;
+              return  $scope.user.name;
             }
           }
         });
