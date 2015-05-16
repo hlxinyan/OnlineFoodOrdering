@@ -6,7 +6,7 @@
     'ngRoute',
     'ui.bootstrap',
     'onLineFoodOrderingControllers',
-    'onLineFoodOrderingServices',
+    'onLineFoodOrderingServices'
 
   ]);
 
