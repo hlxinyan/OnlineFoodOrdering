@@ -16,8 +16,14 @@
         when('/', {
           templateUrl: 'partials/restaurant-list.html',
           controller: 'RestaurantsListCtrl'
+        })
+        .when('/restaurants/:restaurantId', {
+          templateUrl: 'partials/dishes-list.html',
+          controller: 'DishesListCtrl'
+        })
+        .otherwise({
+          redirectTo: '/'
         });
-
     }]);
 
 }());
