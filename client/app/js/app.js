@@ -5,6 +5,7 @@
   var clientApp = angular.module('clientApp', [
     'ngRoute',
     'ui.bootstrap',
+    'resaturantAnimations',
     'onLineFoodOrderingControllers',
     'onLineFoodOrderingServices'
 
