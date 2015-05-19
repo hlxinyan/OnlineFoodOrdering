@@ -1,10 +1,12 @@
-<div class="content-box media col-md-6" ng-repeat="restaurant in restaurants ">
+
+<div class="media col-md-6" ng-repeat="restaurant in restaurants ">
+  <div class="content-box" >
+
       <div class="media-left">
          <a href="#/restaurants/{{restaurant.id}}" class=""><img  ng-src="{{restaurant.imageUrl}}"></a>
       </div>
       <div class="media-body">
           <h4 class="media-heading"><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></h4>
-
           <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span
                   ng-repeat="phone in restaurant.phones">  {{phone}}</span></p>
 

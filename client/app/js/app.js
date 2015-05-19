@@ -1,11 +1,11 @@
-(function(){
+(function () {
   'use strict';
 
   /* App Module */
   var clientApp = angular.module('clientApp', [
     'ngRoute',
     'ui.bootstrap',
-    'resaturantAnimations',
+    'onLineFoodOrderingAnimation',
     'onLineFoodOrderingControllers',
     'onLineFoodOrderingServices'
 

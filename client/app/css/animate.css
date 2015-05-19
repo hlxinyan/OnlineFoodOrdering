@@ -18,6 +18,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    -webkit-transition-timing-function: ease;
+    ransition-timing-function: ease;
+    -moz-transition-timing-function: ease;
     z-index: 100;
 }
 
@@ -141,7 +144,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-     
     z-index: 100;
 }
 
@@ -150,6 +152,60 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-animation-name: pulse;
     animation-name: pulse;
 
+}
+
+
+.media-animation {
+    -webkit-animation-name: Myopacity;
+    animation-name: Myopacity;
+}
+
+
+@keyframes Myopacity {
+    0% {
+       opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+       opacity: 0.8;
+        -webkit-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        transform: scale(0.98)
+    }
+
+    100% {
+
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes Myopacity {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        opacity: 0.8;
+        -webkit-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        transform: scale(0.98)
+    }
+
+    100% {
+
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
 }
 
 @-webkit-keyframes rubberBand {
