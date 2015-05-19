@@ -26,8 +26,7 @@
 
         modalInstance.result.then(function (data) {
           $scope.user={name:data.name,id:data.id};
-            var userCookie = $cookies.myUser
-            $cookies.myUser = 'user';
+
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
         });
@@ -47,8 +46,11 @@
           // this callback will be called asynchronously
           // when the response is available
 
-          $modalInstance.close(data);
-
+//          $scope.data=data;
+//          $scope.status=status;
+              $modalInstance.close(data);
+              var userCookie = $cookies.myUser
+              $cookies.myUser = 'data';
         }).
         error(function(data, status, headers, config) {
           // called asynchronously if an error occurs
