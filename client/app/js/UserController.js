@@ -6,7 +6,7 @@
   };
 
 
-  onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log',
+  onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log','$cookies',
     function ($scope, $modal, $log) {
 
          $scope.open = function (size) {
@@ -24,17 +24,16 @@
 
         modalInstance.result.then(function (data) {
           $scope.user={name:data.name,id:data.id};
+            var userCookie = $cookies.myUser
+            $cookies.myUser = 'user';
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
         });
-
-
       };
       $('[data-target="#bs-navbar-collapse-1"]').click(function () {
         $('#bs-navbar-collapse-1').toggleClass("in");
 //                alert('ddd')
       });
-
 
     }]);
   onLineFoodOrderingControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance,$http) {
