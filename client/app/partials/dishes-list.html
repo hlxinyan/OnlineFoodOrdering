@@ -1,10 +1,8 @@
-<div class="media" ng-repeat="dish in dishes">
-  <div class="media-body">
-    <h4 class="media-heading"><a href="#">{{dish.name}}</a></h4>
-
-    <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span>{{dish.price}}</span></p>
-
-    <p class="text-success"> <span class=""></span></p>
+<div clas="dish-group" ng-repeat="dish in dishes">
+  <h4 >{{dish.gname}}</h4>
+  <div class="col-md-6 dish-item" ng-repeat="item in dish.dishes">
+    <input type="checkbox">
+    <span>{{item.name}}</span>
+    <span class="pull-right">{{item.price}}</span>
   </div>
 </div>
-
