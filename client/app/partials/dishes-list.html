@@ -2,7 +2,7 @@
   <div class="dish-group" ng-repeat="dish in dishes">
     <h4 >{{dish.gname}}</h4>
     <div class="col-md-6 dish-item" ng-repeat="item in dish.dishes">
-      <input type="checkbox">
+      <input type="checkbox" checklist-change="order()" checklist-model="selectedOrderItems" checklist-value="item" >
       <span>{{item.name}}</span>
       <span class="pull-right">{{item.price}}</span>
     </div>
@@ -20,20 +20,20 @@
     </div>
   </div>
   <hr>
-  <div class="container">
+  <div class="container" ng-repeat="order in realOrderItems">
     <div class="row">
       <div class="col-xs-4 pt7">
-        番茄炒蛋饭
+        {{order.dish.name}}
       </div>
       <div class="col-xs-4">
         <div class="input-group">
-          <span class="input-group-addon">-</span>
-          <input type="text" class="form-control" aria-label="1">
-          <span class="input-group-addon">+</span>
+          <span class="input-group-addon" ng-click="minusOne(order)">-</span>
+          <input type="text" class="form-control" aria-label="1" ng-model="order.count" value="{{order.count}}">
+          <span class="input-group-addon" ng-click="addOne(order)">+</span>
         </div>
       </div>
       <div class="col-xs-2 text-center pt7">
-        $12.00
+        {{order.count*order.dish.price}}
       </div>
       <div class="col-xs-2">
         <button class="btn btn-block btn-danger">删除</button>

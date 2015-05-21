@@ -5,9 +5,11 @@
   var clientApp = angular.module('clientApp', [
     'ngRoute',
     'ui.bootstrap',
+    'checklist-model',
     'onLineFoodOrderingAnimation',
     'onLineFoodOrderingControllers',
-    'onLineFoodOrderingServices'
+    'onLineFoodOrderingServices',
+    'onLineFoodOrderingSharedServices'
 
   ]);
 

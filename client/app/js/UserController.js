@@ -1,8 +1,9 @@
 (function(){
 
   'use strict';
-  onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log','$cookies',
-    function ($scope, $modal, $log,$cookies) {
+  onLineFoodOrderingControllers.controller('UserController', ['$scope','onLineFoodOrderingSharedService', '$modal', '$log','$cookies',
+    function ($scope,sharedService, $modal, $log,$cookies) {
+      $scope.currentRestaurant={name:'OrderLunch'};
       $scope.user=$cookies.user;
          $scope.open = function (size) {
 
@@ -28,6 +29,10 @@
       $('[data-target="#bs-navbar-collapse-1"]').click(function () {
         $('#bs-navbar-collapse-1').toggleClass("in");
 //                alert('ddd')
+      });
+
+      $scope.$on('currentRestaurant', function () {
+        $scope.currentRestaurant=sharedService.arg;
       });
 
     }]);
