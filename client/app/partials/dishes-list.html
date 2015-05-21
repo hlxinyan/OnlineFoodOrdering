@@ -1,10 +1,48 @@
-<div class="media" ng-repeat="dish in dishes">
-  <div class="media-body">
-    <h4 class="media-heading"><a href="#">{{dish.name}}</a></h4>
-
-    <p class="text-success"><span class="glyphicon glyphicon-phone-alt"></span><span>{{dish.price}}</span></p>
-
-    <p class="text-success"> <span class=""></span></p>
+<div class="container">
+  <div class="dish-group" ng-repeat="dish in dishes">
+    <h4 >{{dish.gname}}</h4>
+    <div class="col-md-6 dish-item" ng-repeat="item in dish.dishes">
+      <input type="checkbox">
+      <span>{{item.name}}</span>
+      <span class="pull-right">{{item.price}}</span>
+    </div>
   </div>
+</div>
+
+
+
+<div class="navbar-fixed-bottom order-item">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3"></div>
+      <div class="col-xs-7"></div>
+      <div class="col-xs-2"><button class="btn btn-primary btn-block">提交</button></div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-4 pt7">
+        番茄炒蛋饭
+      </div>
+      <div class="col-xs-4">
+        <div class="input-group">
+          <span class="input-group-addon">-</span>
+          <input type="text" class="form-control" aria-label="1">
+          <span class="input-group-addon">+</span>
+        </div>
+      </div>
+      <div class="col-xs-2 text-center pt7">
+        $12.00
+      </div>
+      <div class="col-xs-2">
+        <button class="btn btn-block btn-danger">删除</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
 </div>
 

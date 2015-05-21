@@ -1,20 +1,64 @@
 [
   {
-    "id":"d0001",
-    "name":"酸辣土豆丝",
-    "price":12,
-    "order_count": 0
+    "gid": "g0001",
+    "gname": "工作日午市特供",
+    "dishes": [
+      {
+        "id": "d0001",
+        "name": "番茄炒蛋饭",
+        "price": 11.00,
+        "order_count": 0
+      },
+      {
+        "id": "d0002",
+        "name": "爆炒鸡杂饭",
+        "price": 10,
+        "order_count": 0
+      },
+      {
+        "id": "d0003",
+        "name": "芹菜干丝肉丝饭",
+        "price": 12,
+        "order_count": 0
+      },
+      {
+        "id": "d0003",
+        "name": "川味回锅肉",
+        "price": 15,
+        "order_count": 0
+      }
+    ]
   },
+
   {
-    "id":"d0002",
-    "name":"苦瓜炒蛋",
-    "price":10,
-    "order_count": 0
-  },
-  {
-    "id":"d0003",
-    "name":"红烧肉便当",
-    "price":14,
-    "order_count": 0
+    "gid": "g0002",
+    "gname": "陕西面食经典",
+    "dishes": [
+      {
+        "id": "d0004",
+        "name": "大米凉皮",
+        "price": 7,
+        "order_count": 0
+      },
+      {
+        "id": "d0005",
+        "name": "岐山淦面皮",
+        "price": 8,
+        "order_count": 0
+      },
+      {
+        "id": "d0006",
+        "name": "麻酱凉皮",
+        "price": 8,
+        "order_count": 0
+      },
+      {
+        "id": "d0007",
+        "name": "炒凉皮",
+        "price": 14,
+        "order_count": 0
+      }
+    ]
   }
+
 ]

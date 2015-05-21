@@ -12,7 +12,7 @@
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right" >
+      <ul class="nav navbar-nav navbar-right">
         <li><a href ng-click="open()">Hello {{user.name}}</a></li>
         <li class="dropdown" dropdown on-toggle="toggled(open)">
           <a href class="dropdown-toggle" dropdown-toggle>
@@ -28,10 +28,11 @@
           </ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
-
 
 
 <!--<div class="input-group uer-box">
@@ -42,26 +43,28 @@
 </div>
 <div class="modal-backdrop fade  in"></div>-->
 <!--<script type="text/ng-template" id="myModalContent.html">-->
-    <!--<div class="modal-header">-->
-        <!--<h3 class="modal-title">I'm a modal!</h3>-->
-    <!--</div>-->
-    <!--<div class="modal-body">-->
+<!--<div class="modal-header">-->
+<!--<h3 class="modal-title">I'm a modal!</h3>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
 
-    <!--</div>-->
-    <!--<div class="modal-footer">-->
-        <!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
-        <!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
-    <!--</div>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<button class="btn btn-primary" ng-click="ok()">OK</button>-->
+<!--<button class="btn btn-warning" ng-click="cancel()">Cancel</button>-->
+<!--</div>-->
 <!--</script>-->
 
 
 <script type="text/ng-template" id="myModalContent.html">
-        <div class="input-group user-box">
-            <input type="text" class="form-control input-lg" ng-model="name"  placeholder="Please enter a username" ng-required="true"  />
+
+  <div class="input-group user-box">
+    <input type="text" class="form-control input-lg" ng-model="name" placeholder="Please enter a username"
+           ng-required="true"/>
             <span class="input-group-btn">
                <button type="button" class="btn btn-primary btn-lg" ng-click="ok()">Sign In</button>
             </span>
-        </div>
+  </div>
 </script>
 
 

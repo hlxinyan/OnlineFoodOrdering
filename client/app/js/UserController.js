@@ -1,14 +1,14 @@
 (function(){
 
   'use strict';
-  var userObject = {
-    name: 'abc'
-  };
-
-
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log','$cookies',
+<<<<<<< HEAD
     function ($scope, $modal, $log, $cookies) {
         $scope.user=$cookies.user;
+=======
+    function ($scope, $modal, $log,$cookies) {
+      $scope.user=$cookies.user;
+>>>>>>> origin/master
          $scope.open = function (size) {
 
         var modalInstance = $modal.open({
@@ -17,14 +17,17 @@
           size: size,
           resolve: {
             name: function () {
-              return $scope.user==null?'':$scope.user.name;
+
+              return  $scope.user==null?'':$scope.user.name;
+
             }
           }
         });
 
         modalInstance.result.then(function (data) {
           $scope.user={name:data.name,id:data.id};
-            $cookies.user=$scope.user;
+
+          $cookies.user=  $scope.user;
 
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
@@ -44,6 +47,7 @@
         success(function(data, status, headers, config) {
           // this callback will be called asynchronously
           // when the response is available
+
 //          $scope.data=data;
 //          $scope.status=status;
               $modalInstance.close(data);
@@ -54,6 +58,7 @@
           // or server returns response with an error status.
 
               $modalInstance.close(data);
+
         });
 
     };
