@@ -22,7 +22,7 @@
         "order_count": 0
       },
       {
-        "id": "d0003",
+        "id": "d0004",
         "name": "川味回锅肉",
         "price": 15,
         "order_count": 0
@@ -35,25 +35,25 @@
     "gname": "陕西面食经典",
     "dishes": [
       {
-        "id": "d0004",
+        "id": "d0005",
         "name": "大米凉皮",
         "price": 7,
         "order_count": 0
       },
       {
-        "id": "d0005",
+        "id": "d0006",
         "name": "岐山淦面皮",
         "price": 8,
         "order_count": 0
       },
       {
-        "id": "d0006",
+        "id": "d0007",
         "name": "麻酱凉皮",
         "price": 8,
         "order_count": 0
       },
       {
-        "id": "d0007",
+        "id": "d0008",
         "name": "炒凉皮",
         "price": 14,
         "order_count": 0

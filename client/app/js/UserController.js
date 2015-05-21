@@ -2,13 +2,10 @@
 
   'use strict';
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log','$cookies',
-<<<<<<< HEAD
-    function ($scope, $modal, $log, $cookies) {
-        $scope.user=$cookies.user;
-=======
+
     function ($scope, $modal, $log,$cookies) {
+        $scope.restaurant={id:'0',name:'Order Lunch'}
       $scope.user=$cookies.user;
->>>>>>> origin/master
          $scope.open = function (size) {
 
         var modalInstance = $modal.open({
