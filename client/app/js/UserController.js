@@ -7,8 +7,8 @@
 
 
   onLineFoodOrderingControllers.controller('UserController', ['$scope', '$modal', '$log','$cookies',
-    function ($scope, $modal, $log) {
-
+    function ($scope, $modal, $log, $cookies) {
+        $scope.user=$cookies.user;
          $scope.open = function (size) {
 
         var modalInstance = $modal.open({
@@ -17,13 +17,14 @@
           size: size,
           resolve: {
             name: function () {
-              return $scope.name;
+              return $scope.user==null?'':$scope.user.name;
             }
           }
         });
 
         modalInstance.result.then(function (data) {
           $scope.user={name:data.name,id:data.id};
+            $cookies.user=$scope.user;
 
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
@@ -46,8 +47,7 @@
 //          $scope.data=data;
 //          $scope.status=status;
               $modalInstance.close(data);
-              var userCookie = $cookies.myUser
-              $cookies.myUser = 'data';
+
         }).
         error(function(data, status, headers, config) {
           // called asynchronously if an error occurs
