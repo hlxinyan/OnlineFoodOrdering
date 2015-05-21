@@ -1,9 +1,12 @@
 (function(){
 
   'use strict';
+
   onLineFoodOrderingControllers.controller('UserController', ['$scope','onLineFoodOrderingSharedService', '$modal', '$log','$cookies',
     function ($scope,sharedService, $modal, $log,$cookies) {
       $scope.currentRestaurant={name:'OrderLunch'};
+
+
       $scope.user=$cookies.user;
          $scope.open = function (size) {
 
@@ -13,13 +16,16 @@
           size: size,
           resolve: {
             name: function () {
+
               return  $scope.user==null?'':$scope.user.name;
+
             }
           }
         });
 
         modalInstance.result.then(function (data) {
           $scope.user={name:data.name,id:data.id};
+
           $cookies.user=  $scope.user;
 
         }, function () {
