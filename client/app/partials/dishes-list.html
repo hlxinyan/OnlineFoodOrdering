@@ -32,33 +32,37 @@
     </div>
     <div class="real-content container">
         <div class="clearfix" ng-repeat="order in realOrderItems">
+
             <div class="col-xs-5 pt7">{{order.dish.name}}</div>
             <div class="col-xs-3">
                 <div class="input-group">
                     <span class="input-group-addon" ng-click="minusOne(order)">-</span>
-                    <input type="text" class="form-control" aria-label="1" ng-model="order.count" value="{{order.count}}">
+                    <input type="text" class="form-control" aria-label="1"  ng-model="order.count" value="{{order.count}}">
                     <span class="input-group-addon" ng-click="addOne(order)">+</span>
 
                 </div>
             </div>
             <div class="col-xs-2 text-center pt7">
                 {{order.count*order.dish.price}}
+
             </div>
             <div class="col-xs-2">
                 <button class="btn  btn-danger" ng-click="deleteOrder(order)">删除</button>
             </div>
         </div>
 
-    </div>
-    <div class="navbar-fixed-bottom order-item">
+      <div class="navbar-fixed-bottom order-item">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-9 pt7">
-                    公共：12份； 共计：120元
-                </div>
-                <div class="col-xs-2"><button class="btn btn-warning btn-block">提交</button></div>
+          <div class="row">
+            <div class="col-xs-9 pt7">
+             共： {{sum(realOrderItems).total}}  份 ; 总计:{{sum(realOrderItems).total_price}}
             </div>
+            <div class="col-xs-2"><button class="btn btn-warning btn-block">提交</button></div>
+          </div>
         </div>
+      </div>
+
+
     </div>
 
 </div>
