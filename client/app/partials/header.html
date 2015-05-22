@@ -8,10 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">{{currentRestaurant.name}}</a>
+      <a class="navbar-brand" href="javascript:void(0)">
+          <span class="glyphicon glyphicon-menu-left"></span>
+      </a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
+
+    <div class="collapse navbar-collapse text-center" id="bs-navbar-collapse-1">
+        <a class="restaurant-name"href="javascript:void(0)">{{currentRestaurant.name}}</a>
       <ul class="nav navbar-nav navbar-right">
         <li><a href ng-click="open()">Hello {{user.name}}</a></li>
         <li class="dropdown" dropdown on-toggle="toggled(open)">

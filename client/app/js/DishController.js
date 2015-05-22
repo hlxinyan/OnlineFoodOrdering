@@ -71,7 +71,12 @@
           }
         }
       }
-
+    $('#moreDetail').click(function(){
+        $('#realDetail').show()
+    })
+    $('#comeBack').click(function(){
+        $('#realDetail').hide()
+    })
 
     }]);
 }());

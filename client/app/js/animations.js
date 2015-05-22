@@ -17,6 +17,8 @@ onLineFoodOrderingAnimation.animation('.media', [function() {
     }
 
 }]);
+
+
 /*
 onLineFoodOrderingAnimation.animation('.media', ['$animateCss',function($animateCss) {
 
