@@ -2,8 +2,11 @@
   <div class="dish-group" ng-repeat="dish in dishes">
     <h4 >{{dish.gname}}</h4>
     <div class="col-md-6 dish-item" ng-repeat="item in dish.dishes">
-      <input type="checkbox" checklist-change="order()" checklist-model="selectedOrderItems" checklist-value="item" >
-      <span>{{item.name}}</span>
+        <label for="{{item.id}}" class="checkbox checked">
+            <input type="checkbox" class="dishes-check" checklist-change="order()" id="{{item.id}}" checklist-model="selectedOrderItems" checklist-value="item" >
+            <span class="icon-to-fade"></span>
+            <span>{{item.name}}</span>
+        </label>
       <span class="pull-right">{{item.price}}</span>
     </div>
   </div>
