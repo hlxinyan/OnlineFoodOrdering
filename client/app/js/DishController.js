@@ -2,11 +2,14 @@
   'use strict';
   var orderItems = [];
 
-  onLineFoodOrderingControllers.controller('DishesListCtrl', ['$scope', 'onLineFoodOrderingSharedService', '$routeParams', 'Restaurant',
-    function ($scope, sharedService, $routeParams, Restaurant) {
+  onLineFoodOrderingControllers.controller('DishesListCtrl', ['$scope', 'onLineFoodOrderingSharedService', '$routeParams', 'Restaurant','$cookies',
+    function ($scope, sharedService, $routeParams, Restaurant,$cookies) {
       $scope.dishes = Restaurant.query({restaurantId: $routeParams.restaurantId});
       $scope.selectedOrderItems = orderItems;
       $scope.summary = {};
+      $scope.user=$cookies.user;
+
+
 
       $scope.order = function () {
         $scope.realOrderItems = [];
@@ -14,7 +17,6 @@
         for (var i = 0; i < $scope.selectedOrderItems.length; i++) {
           var item = $scope.selectedOrderItems[i];
           var realOrder = {dish: item, count: 1};
-
           $scope.realOrderItems.splice(0, 0, realOrder);
         }
 
@@ -63,21 +65,6 @@
 
         }
       };
-
-      $scope.minusOneSummary = function (realOrder) {
-        $scope.summary.total -= 1;
-
-        $scope.summary.total_price -= realOrder.dish.price;
-
-        if ($scope.summary.total < 0)  $scope.summary.total = 0;
-        if ($scope.summary.total_price < 0)  $scope.summary.total_price = 0;
-      };
-
-      $scope.addOneSummary = function (realOrder) {
-        $scope.summary.total += 1;
-        $scope.summary.total_price += realOrder.dish.price;
-      };
-
       $scope.deleteChecked = function (dish) {
         for (var i = 0; i < $scope.selectedOrderItems.length; i++) {
           var item = $scope.selectedOrderItems[i];
@@ -98,6 +85,17 @@
         summary.total = total;
         summary.total_price = totalPrice;
         return summary;
+
+      };
+      $scope.submit=function(realOrderItems){
+        if($scope.user ==null){
+          sharedService.prepForBroadcast(realOrderItems);
+          sharedService.broadcastItem('needToLogin');
+          return;
+        }else{
+          console.log("submit for user has login");
+          console.log($scope.user);
+        }
 
       };
       $('#moreDetail').click(function () {

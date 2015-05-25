@@ -57,7 +57,7 @@
             <div class="col-xs-9 pt7">
              共： {{sum(realOrderItems).total}}  份 ; 总计:{{sum(realOrderItems).total_price}}
             </div>
-            <div class="col-xs-2"><button class="btn btn-warning btn-block">提交</button></div>
+            <div class="col-xs-2"><button class="btn btn-warning btn-block" ng-click="submit(realOrderItems)">提交</button></div>
           </div>
         </div>
       </div>

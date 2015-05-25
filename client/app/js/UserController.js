@@ -8,6 +8,7 @@
 
 
       $scope.user=$cookies.user;
+
          $scope.open = function (size) {
 
         var modalInstance = $modal.open({
@@ -27,6 +28,8 @@
           $scope.user={name:data.name,id:data.id};
 
           $cookies.user=  $scope.user;
+          sharedService.prepForBroadcast( $scope.user);
+          sharedService.broadcastItem('hasLogin');
 
         }, function () {
           $log.info('Modal dismissed at: ' + new Date());
@@ -39,6 +42,10 @@
 
       $scope.$on('currentRestaurant', function () {
         $scope.currentRestaurant=sharedService.arg;
+      });
+
+      $scope.$on('needToLogin', function () {
+        $scope.open();
       });
 
     }]);
