@@ -8,7 +8,25 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="restaurant-name"href="javascript:void(0)">{{currentRestaurant.name}}</a>
+      <span class="dropdown" dropdown on-toggle="toggled(open)">
+          <a class="restaurant-name"href class="dropdown-toggle" dropdown-toggle>{{currentRestaurant.name}} <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+          <ul class="dropdown-menu">
+             <li>
+                 <nav class="navbar-fixed-top navbar restaurant">
+                     <div class="container">
+                         饭店列表
+                     </div>
+                 </nav>
+                 <div class="restaurant-body container">
+                    <a href="javascript:void(0)">小长安</a>
+                    <a href="javascript:void(0)">小长安</a>
+                    <a href="javascript:void(0)">小长安</a>
+                    <a href="javascript:void(0)">小长安</a>
+                 </div>
+             </li>
+          </ul>
+    </span>
+
       <a class="navbar-brand" href="javascript:void(0)">
           <span class="glyphicon glyphicon-menu-left"></span>
       </a>
@@ -70,5 +88,6 @@
             </span>
   </div>
 </script>
+
 
 
