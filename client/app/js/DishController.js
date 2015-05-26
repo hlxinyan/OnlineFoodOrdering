@@ -2,8 +2,8 @@
   'use strict';
   var orderItems = [];
 
-  onLineFoodOrderingControllers.controller('DishesListCtrl', ['$scope', 'onLineFoodOrderingSharedService', '$routeParams', 'Restaurant','$cookies',
-    function ($scope, sharedService, $routeParams, Restaurant,$cookies) {
+  onLineFoodOrderingControllers.controller('DishesListCtrl', ['$scope', 'onLineFoodOrderingSharedService', '$routeParams', 'Restaurant','$cookies','$location',
+    function ($scope, sharedService, $routeParams, Restaurant,$cookies,$location) {
       $scope.dishes = Restaurant.query({restaurantId: $routeParams.restaurantId});
       $scope.selectedOrderItems = orderItems;
       $scope.summary = {};
@@ -14,6 +14,12 @@
       $scope.order = function () {
         $scope.realOrderItems = [];
 
+        if(orderItems.length>0){
+            $('#cartTotal').fadeIn()
+        }else{
+            $('#cartTotal').fadeOut()
+            $('.real-box ').fadeOut()
+        }
         for (var i = 0; i < $scope.selectedOrderItems.length; i++) {
           var item = $scope.selectedOrderItems[i];
           var realOrder = {dish: item, count: 1};
@@ -31,7 +37,6 @@
               $scope.realOrderItems.splice(i, 1);
               $scope.deleteChecked(realOrder.dish);
             }
-
             break;
           }
 
@@ -44,6 +49,7 @@
 
           if (item.dish.id == realOrder.dish.id) {
              item.count=parseInt(item.count)+1;
+
             break;
 
           }
@@ -88,22 +94,34 @@
 
       };
       $scope.submit=function(realOrderItems){
+          console.log("test");
         if($scope.user ==null){
+            console.log("test");
           sharedService.prepForBroadcast(realOrderItems);
           sharedService.broadcastItem('needToLogin');
+
           return;
         }else{
           console.log("submit for user has login");
           console.log($scope.user);
+            var order={user:$scope.user,order_list:realOrderItems,rid:$routeParams.restaurantId};
+
+            sharedService.prepForBroadcast(order);
+            sharedService.broadcastItem('addCurrentOrder');
+            $location.path("/addOrder");
+
+
+
         }
 
       };
       $('#moreDetail').click(function () {
-        $('#realDetail').show()
+        $('#realDetail').fadeIn()
       })
       $('#comeBack').click(function () {
-        $('#realDetail').hide()
+        $('#realDetail').fadeOut()
       })
+
 
     }]);
 }());

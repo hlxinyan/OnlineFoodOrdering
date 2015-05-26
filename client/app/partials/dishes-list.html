@@ -12,11 +12,11 @@
 
 
 
-<div class="navbar-fixed-bottom order-item">
+<div class="navbar-fixed-bottom order-item" id="cartTotal" style="display: none">
   <div class="container">
     <div class="row">
-      <div class="col-xs-9 pt7">
-       <span class="real-name"  ng-repeat="order in realOrderItems">{{order.dish.name}}</span>
+      <div class="col-xs-10 pt7">
+       <span class="real-name" ng-repeat="order in realOrderItems">{{order.dish.name}}</span>
       </div>
       <div class="col-xs-2"><button class="btn btn-warning btn-block" id="moreDetail">详情</button></div>
     </div>
@@ -54,8 +54,9 @@
       <div class="navbar-fixed-bottom order-item">
         <div class="container">
           <div class="row">
-            <div class="col-xs-9 pt7">
-             共： {{sum(realOrderItems).total}}  份 ; 总计:{{sum(realOrderItems).total_price}}
+            <div class="col-xs-10 pt7">
+             共：<span class="total-num">{{sum(realOrderItems).total}}</span> 份 ; &nbsp;&nbsp;
+                总计: <strong class="total-price">{{sum(realOrderItems).total_price}}</strong> 元
             </div>
             <div class="col-xs-2"><button class="btn btn-warning btn-block" ng-click="submit(realOrderItems)">提交</button></div>
           </div>

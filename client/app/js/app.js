@@ -24,6 +24,14 @@
           templateUrl: 'partials/dishes-list.html',
           controller: 'DishesListCtrl'
         })
+        .when('/addOrder', {
+              templateUrl: 'partials/order-list.html',
+              controller: 'OrderListCtrl'
+        })
+        .when('/orderDetail', {
+              templateUrl: 'partials/order-detail.html',
+              controller: 'OrderDetailCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });

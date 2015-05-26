@@ -1,13 +1,14 @@
 <nav ng-controller="UserController" class="navbar navbar-default">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+    <div class="navbar-header text-center">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="restaurant-name"href="javascript:void(0)">{{currentRestaurant.name}}</a>
       <a class="navbar-brand" href="javascript:void(0)">
           <span class="glyphicon glyphicon-menu-left"></span>
       </a>
@@ -15,7 +16,6 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
 
     <div class="collapse navbar-collapse text-center" id="bs-navbar-collapse-1">
-        <a class="restaurant-name"href="javascript:void(0)">{{currentRestaurant.name}}</a>
       <ul class="nav navbar-nav navbar-right">
         <li><a href ng-click="open()">Hello {{user.name}}</a></li>
         <li class="dropdown" dropdown on-toggle="toggled(open)">

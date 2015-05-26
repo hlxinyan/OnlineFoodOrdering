@@ -48,6 +48,11 @@
         $scope.open();
       });
 
+        $scope.$on('addCurrentOrder', function () {
+            sharedService.prepForBroadcast(sharedService.arg);
+            sharedService.broadcastItem("addOrderEvent");
+        });
+
     }]);
   onLineFoodOrderingControllers.controller('ModalInstanceCtrl', function ($scope, $modalInstance,$http) {
      $scope.ok = function () {

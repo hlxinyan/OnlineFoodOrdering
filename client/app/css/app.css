@@ -1,6 +1,6 @@
 body{  background-color: #f3f3f4; font-family: "微软雅黑"}
 nav { background: #026aa7 !important;border-radius: 0 !important;}
-.navbar{margin-bottom:2px; border: none}
+.navbar{margin-bottom:0px; border: none}
 .navbar-default .navbar-brand{color:#fff}
 .navbar-default .navbar-brand:hover{color:#fff}
 .navbar-default .navbar-nav > li > a{color: #fff}
@@ -8,26 +8,27 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
     background:#00619a;color:#c3e9ff}
 .media{padding:0 15px;margin: 0;}
-.media .content-box{padding:15px;margin-top:25px;border: 1px solid #e7eaec; background: #fff}
+.media .content-box{padding:15px;margin-top:30px;border: 1px solid #e7eaec; background: #fff}
 .media>.content-box>.media-left>a>img{width: 72px;height:72px;border-radius: 100%;-wekit-border-radius: 100%;border-radius: 100%; border:3px solid #fff;box-shadow: 3px 3px 3px rgba(0,0,0,0.2); overflow: hidden}
-.media:hover{}
 .navbar-default .navbar-toggle .icon-bar{background-color:#fff}
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus,.navbar-default .navbar-nav .open .dropdown-menu > li > a{ background:#00619a;color:#c3e9ff}
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{color: #fff}
-.dropdown-menu{background-color: #00619a;}
+.dropdown-menu{background-color: #00619a; border-color: #0075ba; }
 .dropdown-menu>.divider{background-color: #0075ba;}
+.navbar-collapse,.navbar-default .navbar-collapse, .navbar-default .navbar-form{border-color: #0075ba; }
 .user-box{z-index: 9999;width: 90%;position: absolute;left: 5%;top: 40%}
 .user-box .form-control{background: none;border-color:rgba(255,255,255,0.3);color:#fff}
 .modal-backdrop.in{opacity: .85}
 .modal-dialog{margin: 90px auto}
-.dish-group{background: #ffffff;border: 1px solid #e0e0e0;overflow:hidden;margin: 15px;
+.dish-group{background: #ffffff;border: 1px solid #e0e0e0;overflow:hidden;margin: 15px 0;
    box-shadow: 1px 1px 3px rgba(50,50,50,0.1);padding-bottom: 15px}
 .dish-group> h4{background: #f4f5f5;padding:10px;margin:0px;border-bottom:1px solid #e0e0e0}
 .dish-item{padding-top:16px}
 .order-item{background: #026aa7; color:#fff;padding: 5px; border-top: 1px solid #ddd; box-shadow: 0 -2px 2px rgba(0,0,0,0.02)}
 .order-item div[class^="col-xs"]{padding-left: 5px;padding-right: 5px}
 .order-item hr{margin-bottom: 10px; margin-top: 10px; border-color: rgba(255,255,255,0.1)}
-.restaurant-name{font-size: 18px; height: 50px;  padding: 10px;color: #fff; display: inline-block}
+.navbar-header{position: relative}
+.restaurant-name{font-size: 18px; height: 50px; padding: 10px;color: #fff; display: inline-block; }
 .real-name{padding:0 5px}
 .real-box{position: fixed; width: 100%; height: 100%; bottom: 0; left: 0; background: #fff; z-index: 1032}
 .real-box .real-header{ padding: 12px 0; background: #026aa7;min-height: 50px; color: #fff; font-size: 18px}
@@ -36,6 +37,8 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .real-content>div{border-bottom: 1px solid #ddd; padding: 15px 0}
 .real-content{padding: 10px !important;}
 .real-content>div>div[class^="col-xs"]{padding-left:3px;padding-right: 3px}
+.real-box .navbar-fixed-bottom{padding: 5px}
+.form-control{padding:6px 2px; text-align: center}
 
 .navbar-brand{font-size: 24px; padding-top: 12px}
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus{color: #fff}
@@ -50,11 +53,24 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .dishes-check:checked~.icon-to-fade {background: url("../images/checkbox.png") no-repeat scroll -60px -30px;}
 .dishes-check~.icon-to-fade {background: url("../images/checkbox.png") no-repeat scroll -90px 0;}
 .checkbox .icon, .radio .icon {opacity: 0;top: 0; z-index: 2;}
+.total-num,.total-price{padding-left:8px}
+.total-price{font-size: 18px; color: #ff0}
+.order-list{margin-top: 20px}
+.order-list>.clearfix{border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px}
+.order-detail>.clearfix{border-bottom: 1px dotted #eee; padding-top: 10px; padding-bottom: 10px}
+.order-footer{padding: 15px 0px; background: #f8f8f8; overflow: hidden;}
+.order-list div[class^="col-xs"]{padding-left:3px;padding-right: 3px}
+
+.panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a
+{outline: none; color: #444; font-size: 14px}
+.panel-title b{padding-left:3px;padding-right: 3px }
+
+
 @media screen and (max-width: 767px) {
     .media>.content-box>.media-left{padding-right: 20px}
     .navbar .container{padding-right: 15px;padding-left:15px;}
-
-
+    .media{padding:0px;margin: 0;}
+    .media .content-box{margin-top:20px;}
 }
 @media (min-width: 768px){
     .media>.content-box>.media-left>a>img{width: 100px;height:100px;}
@@ -62,4 +78,5 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 }
 
 .pt7{padding-top:7px}
+.plr15{padding-left: 15px;padding-right: 15px}
 

@@ -1,0 +1,59 @@
+<div class="dish-group order-list">
+<h4 >小长安<small class="pull-right">2015-05-25</small></h4>
+    <div class="clearfix">
+        <div class="col-xs-2 pt7">Bruce</div>
+        <div class="col-xs-3 text-center pt7">
+           宫保鸡丁
+        </div>
+        <div class="col-xs-3">
+            <div class="input-group">
+                <span class="input-group-addon" ng-click="">-</span>
+                <input type="text" class="form-control" aria-label="1"  ng-model="order.count" value="2">
+                <span class="input-group-addon" ng-click="">+</span>
+            </div>
+        </div>
+        <div class="col-xs-2 text-center pt7">
+            12.00
+        </div>
+        <div class="col-xs-2">
+            <button class="btn  btn-danger" ng-click="deleteOrder(order)">删除</button>
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-2 pt7">Bruce</div>
+        <div class="col-xs-3 text-center pt7">
+            宫保鸡丁
+        </div>
+        <div class="col-xs-3">
+            <div class="input-group">
+                <span class="input-group-addon" ng-click="">-</span>
+                <input type="text" class="form-control" aria-label="1"  ng-model="order.count" value="2">
+                <span class="input-group-addon" ng-click="">+</span>
+            </div>
+        </div>
+        <div class="col-xs-2 text-center pt7">
+            12.00
+        </div>
+        <div class="col-xs-2">
+            <button class="btn  btn-danger" ng-click="deleteOrder(order)">删除</button>
+        </div>
+    </div>
+    <div class="order-footer hide">
+        <div class="col-xs-4"><button class="btn btn-primary"><span class="glyphicon glyphicon-earphone"></span>&nbsp;021-9355555</button></div>
+        <div class="col-xs-8">
+            鱼香肉丝<b class="text-success">2</b>份，蒜苗炒肉<b class="text-success">3</b>份，
+            宫保鸡丁<b class="text-success">4</b>份，共计<b class="text-success">9</b>份，
+            共计<b class="text-danger">140</b>元
+        </div>
+    </div>
+</div>
+
+<div class="navbar-fixed-bottom order-item" >
+  <div class="container">
+      <div class="plr15"><button class="btn btn-warning btn-block" ng-click="submit(orderDetail)">提交</button></div>
+  </div>
+</div>
+
+
+
+
