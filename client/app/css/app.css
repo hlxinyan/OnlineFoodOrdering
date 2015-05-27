@@ -1,4 +1,4 @@
-body{  background-color: #f3f3f4; font-family: "微软雅黑"}
+body{  background-color: #f3f3f4; font-family: "微软雅黑"; padding-top: 50px; }
 nav { background: #026aa7 !important;border-radius: 0 !important;}
 .navbar{margin-bottom:0px; border: none}
 .navbar-default .navbar-brand{color:#fff}
@@ -35,6 +35,7 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .real-header .glyphicon-menu-left{font-size: 24px;cursor: pointer}
 .real-header .container{padding-right: 15px;padding-left: 15px}
 .real-content>div{border-bottom: 1px solid #ddd; padding: 15px 0}
+.real-content > div:last-child{border: none}
 .real-content{padding: 10px !important;}
 .real-content>div>div[class^="col-xs"]{padding-left:3px;padding-right: 3px}
 .real-box .navbar-fixed-bottom{padding: 5px}
@@ -57,13 +58,14 @@ nav { background: #026aa7 !important;border-radius: 0 !important;}
 .total-price{font-size: 18px; color: #ff0}
 .order-list{margin-top: 20px}
 .order-list>.clearfix{border-bottom: 1px dashed #ddd; padding-top: 15px; padding-bottom: 15px}
-.order-detail>.clearfix{border-bottom: 1px dotted #eee; padding-top: 10px; padding-bottom: 10px}
+.order-detail>.clearfix{border-bottom: 1px dashed #ddd; padding-top: 10px; padding-bottom: 10px}
 .order-footer{padding: 15px 0px; background: #f8f8f8; overflow: hidden;}
 .order-list div[class^="col-xs"]{padding-left:3px;padding-right: 3px}
 
 .panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a
 {outline: none; color: #444; font-size: 14px}
 .panel-title b{padding-left:3px;padding-right: 3px }
+.panel-default > .panel-heading{background: #fff}
 .navbar.restaurant{padding: 10px; color: #fff; text-align: center; font-size: 16px}
 .restaurant-body{background: #fff;position: fixed; top: 50px; left: 0; width: 100%; height: 100%;text-align: center}
 .restaurant-body a{padding: 10px;width: 40%; border: 1px solid #ddd; margin: 10px; display: inline-block; }

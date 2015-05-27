@@ -33,8 +33,8 @@
     <div class="real-content container">
         <div class="clearfix" ng-repeat="order in realOrderItems">
 
-            <div class="col-xs-5 pt7">{{order.dish.name}}</div>
-            <div class="col-xs-3">
+            <div class="col-xs-4 pt7">{{order.dish.name}}</div>
+            <div class="col-xs-4">
                 <div class="input-group">
                     <span class="input-group-addon" ng-click="minusOne(order)">-</span>
                     <input type="text" class="form-control" aria-label="1"  ng-model="order.count" value="{{order.count}}">
